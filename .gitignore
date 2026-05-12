@@ -1,5 +1,31 @@
-private/
-__pycache__/
-*.log
+# Private notes
 notes/
+private/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.so
+.Python
+venv/
+.env
+.venv/
+
+# Logs and temp files
 *.log
+*.tmp
+*.bak
+*.swp
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# USB device nodes (never commit)
+/dev/bus/usb/*
