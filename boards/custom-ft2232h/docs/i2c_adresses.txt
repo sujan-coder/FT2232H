@@ -1,0 +1,28 @@
+I2C COMMON ADDRESSES QUICK REFERENCE
+
+START WITH THESE:
+  0x68 - MPU6050, DS3231 (most common)
+  0x3C - SSD1306 OLED
+  0x76 - BMP280/BME280
+  0x27 - LCD backpack
+  0x40 - Si7021/HTU21D
+  0x50 - EEPROM (24LCxx)
+  0x1E - HMC5883L
+
+ADDRESS RANGES BY DEVICE:
+  Temperature:   0x40-0x5C
+  Motion:        0x68-0x69, 0x1D, 0x1E
+  Display:       0x3C-0x3D, 0x27, 0x3F
+  Memory/RTC:    0x50-0x57, 0x68
+  I/O Expander:  0x20-0x27, 0x38-0x3F
+
+TO SCAN FOR ADDRESSES:
+  from pyftdi.i2c import I2cController
+  i2c = I2cController()
+  i2c.configure('ftdi://ftdi:2232h/1')
+  for addr in range(8, 120):
+      try:
+          i2c.get_port(addr).write(b'')
+          print(f"Found at 0x{addr:02X}")
+      except: pass
+
