@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-SPI Communication Example
 This code is just for understanding the protocol implementation
+SPI Communication Example
 Reads from an SPI sensor (e.g., MCP3008 ADC)
 Requires: FT2232H Mini Module
 """
