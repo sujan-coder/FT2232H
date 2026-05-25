@@ -16,6 +16,14 @@ ADDRESS RANGES BY DEVICE:
   Memory/RTC:    0x50-0x57, 0x68
   I/O Expander:  0x20-0x27, 0x38-0x3F
 
+REQUIREMENTS:
+- Pull-up resistors (4.7kΩ) on SCL and SDA lines to 3.3V
+- I2C device connected to the bus
+
+Pins used:
+- SCL: ADBUS0 (Channel A) or BDBUS0 (Channel B)
+- SDA: ADBUS1 (Channel A) or BDBUS1 (Channel B)\
+
 TO SCAN FOR ADDRESSES:
   from pyftdi.i2c import I2cController
   i2c = I2cController()
