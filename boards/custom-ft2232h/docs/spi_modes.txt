@@ -1,0 +1,21 @@
+SPI MODES QUICK REFERENCE
+
+MODE 0 (CPOL=0, CPHA=0) - TRY THIS FIRST
+- Clock idle: LOW
+- Sample on: Rising edge
+- Used by: MCP3008, MAX7219, most devices
+
+MODE 1 (CPOL=0, CPHA=1)
+- Clock idle: LOW  
+- Sample on: Falling edge
+
+MODE 2 (CPOL=1, CPHA=0)
+- Clock idle: HIGH
+- Sample on: Falling edge
+
+MODE 3 (CPOL=1, CPHA=1)
+- Clock idle: HIGH
+- Sample on: Rising edge
+- Used by: 25LC256 EEPROM
+
+To test: Start with MODE 0, if data is corrupted try MODE 3
